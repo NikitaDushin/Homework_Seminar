@@ -11,7 +11,7 @@ while (numberA > 1)
     count++;
 }
 
-if (count == 2) 
+if (count <= 2) 
 {
     Console.Write("Третьей цифры нет");
 }
