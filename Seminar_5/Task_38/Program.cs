@@ -3,18 +3,17 @@
 // [3 7 22 2 78] -> 76
 
 
-
-int[] CreateRandomArray(int N, int start, int end)
+double [] DoubleMass (int size) // Функция задания массива случайных вещественных чисел от -100 до 100 размером size;
 {
-    int[] RandomArray = new int[N];
-    for (int i = 0; i < N; i++)
-    {
-        RandomArray[i] = new Random().Next(start, end + 1);
-    }
-    return RandomArray;
+double [] result = new double[size];
+for (int i = 0; i < size; i++)
+{
+result[i] = Convert.ToDouble(new Random().Next(-1000, 1000)/10.0);
+}
+return result;
 }
 
-void ShowArray(int[] array)
+void ShowArray(double[] array)
 {
     for (int i = 0; i < array.Length; i++)
     {
@@ -23,11 +22,13 @@ void ShowArray(int[] array)
     Console.WriteLine();
 }
 
-int [] MyArray = CreateRandomArray(15,-15,40);
+// int [] MyArray = CreateRandomArray(15,-15,40);
+double [] MyArray = DoubleMass(5);
+
 ShowArray(MyArray);
 
-int min = MyArray[0];
-int max = MyArray[0];
+double min = MyArray[0];
+double max = MyArray[0];
 
 for (int i = 0; i<MyArray.Length; i++)
 {
