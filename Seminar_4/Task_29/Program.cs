@@ -28,6 +28,6 @@ void ShowArray(int[] array) // Выведение массива в термин
 
 
 int [] array = GetBinaryArray(8, -10, 100);
-Console.Write($" [ {String.Join(", ", array)} ] "); // Вариант вывода в терминал массива
+// Console.Write($" [ {String.Join(", ", array)} ] "); // Вариант вывода в терминал массива
 
-// ShowArray(array);
+ShowArray(array);
